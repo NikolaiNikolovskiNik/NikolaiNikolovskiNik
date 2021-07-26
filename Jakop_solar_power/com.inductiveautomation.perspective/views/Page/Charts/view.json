@@ -1,0 +1,727 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 854,
+      "width": 683
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "icon": "show_chart",
+            "text": "Stanje inverterja"
+          },
+          "path": "Page/Embedded/Title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Image"
+            },
+            "position": {
+              "height": 770.96,
+              "width": 598.98,
+              "x": 46.99,
+              "y": 1.92
+            },
+            "props": {
+              "fit": {
+                "height": 500,
+                "mode": "fill",
+                "width": 500
+              },
+              "source": "/system/images/Solar Power/inverter4.svg"
+            },
+            "type": "ia.display.image"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 427.96,
+              "y": 540
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_CurrentA_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(round(value,2)) + \"A\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 428.905,
+              "y": 508
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_VoltageAN_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(int(value)) + \"V\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 477.904705963,
+              "y": 508
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_VoltageBN_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(int(value)) + \"V\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 477.96,
+              "y": 540
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_CurrentB_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(round(value,2)) + \"A\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 526.96,
+              "y": 508
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_VoltageCN_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(int(value)) + \"V\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 525.96,
+              "y": 540
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_CurrentC_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(round(value,2)) + \"A\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_5"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 162.96,
+              "y": 508
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_DC_Voltage_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(int(value)) + \"V\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_6"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 162.9047212219238,
+              "y": 540
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_DC_Current_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(round(value,2)) + \"A\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_7"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 429.6580271759033,
+              "y": 222.4
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_VoltageAB_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(int(value)) + \"V\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_9"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 246.27100000000002,
+              "y": 218.87400000000002
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_VoltageCA_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(int(value)) + \"V\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_10"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 49.99,
+              "x": 334.27119021606444,
+              "y": 292.4
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_VoltageBC_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(int(value)) + \"V\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_11"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 293,
+              "x": 209.8978125,
+              "y": 133.26999999999998
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_Power_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (\"Trenutna moc: \" + str(round(value,2)) + \"W\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "start"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_12"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 293,
+              "x": 209.8298125,
+              "y": 165.59699999999998
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_Temp_SF_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (\"Temperatura inverter: \" + str(round(value,2)) + \"C\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "start"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_13"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 293,
+              "x": 212.7675,
+              "y": 70.59700000000001
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_Energy_kWH_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (\"Proizvedeno skupaj: \" + str(round(value,2)) + \"kWh\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "start"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_8"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 140,
+              "x": 427.9,
+              "y": 602
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_AC_Frequency_scaled"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toutput \u003d (str(round(value,2)) + \"Hz\")\n\treturn output",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_14"
+            },
+            "position": {
+              "height": 32.08,
+              "rotate": {
+                "anchor": "574% -363%"
+              },
+              "width": 293,
+              "x": 212.7055,
+              "y": 100.862625
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SolarEdge inverter/I_Status"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tstanje \u003d \"Napaka pri branju stanja naprave\"\n\t\n\tif value\u003d\u003d1:\n\t\tstanje \u003d \"Izklopljena\"\n\telif value\u003d\u003d2:\n\t\tstanje \u003d \"V nocnem nacinu (spi)\"\t\t\n\telif value\u003d\u003d3:\n\t\tstanje \u003d \"V procesu zagona\"\n\telif value\u003d\u003d4:\n\t\tstanje \u003d \"Deluje in proizvaja\"\t\t\n\telif value\u003d\u003d5:\n\t\tstanje \u003d \"Deluje in proizvaja z omejitvijo\"\n\telif value\u003d\u003d6:\n\t\tstanje \u003d \"V procesu izklopa\"\t\t\t\n\telif value\u003d\u003d7:\n\t\tstanje \u003d \"Sistem v napaki\"\n\telif value\u003d\u003d7:\n\t\tstanje \u003d \"V procesu vzdrževanja\"\n\t\t\t\t\t\t\n\treturn (\"Trenutno stanje: \" + stanje)\n\t",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "fontWeight": "normal",
+                "textAlign": "start"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "787px",
+          "shrink": 0
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Page/Page"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

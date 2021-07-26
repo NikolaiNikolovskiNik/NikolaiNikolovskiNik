@@ -1,0 +1,16 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "data.bin"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "patrik.pusnik",
+      "timestamp": "2021-06-25T13:09:45Z"
+    },
+    "lastModificationSignature": "950c3403d423f1ff60408bbea88f3c410bfe280edd8147cc0c0cb3ccba45ebf7"
+  }
+}

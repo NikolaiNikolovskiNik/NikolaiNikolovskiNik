@@ -1,0 +1,11 @@
+{
+  "pages": {
+    "/inverter_monitoring": {
+      "viewPath": "SolarEdge"
+    },
+    "/": {
+      "viewPath": "SolarEdge"
+    }
+  },
+  "sharedDocks": {}
+}

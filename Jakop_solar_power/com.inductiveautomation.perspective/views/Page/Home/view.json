@@ -1,0 +1,570 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "icon": "home",
+            "text": "Generalni pregled elektrarne"
+          },
+          "path": "Page/Embedded/Title"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "hasDelegate": true,
+          "name": "Spacer_3"
+        },
+        "position": {
+          "basis": "5px",
+          "shrink": 0
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "hasDelegate": true,
+          "name": "Spacer_4"
+        },
+        "position": {
+          "basis": "10px",
+          "shrink": 0
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Stanje elektrarne label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica",
+                    "fontWeight": "bold",
+                    "textAlign": "right",
+                    "textTransform": "uppercase"
+                  },
+                  "text": "Stanje elektrarne:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Trenutna moč el:"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica",
+                    "fontWeight": "bold",
+                    "textAlign": "right",
+                    "textTransform": "uppercase"
+                  },
+                  "text": "Trenutna moč:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer_0"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Proizvedeno danes:"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica",
+                    "fontWeight": "bold",
+                    "textAlign": "right",
+                    "textTransform": "uppercase"
+                  },
+                  "text": "Proizvedeno danes:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer_1"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Prihranek danes"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica",
+                    "fontWeight": "bold",
+                    "textAlign": "right",
+                    "textTransform": "uppercase"
+                  },
+                  "text": "Prihranek danes:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer_2"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Izguba transformatorja"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica",
+                    "fontWeight": "bold",
+                    "textAlign": "right",
+                    "textTransform": "uppercase"
+                  },
+                  "text": "Izguba transformatorja:"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "250px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "spacer"
+            },
+            "position": {
+              "basis": "10px"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Stanje elektrarne smart label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]SolarEdge inverter/I_Status"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tstanje \u003d \"Napaka pri branju stanja naprave\"\n\t\n\tif value\u003d\u003d1:\n\t\tstanje \u003d \"Izklopljena\"\n\telif value\u003d\u003d2:\n\t\tstanje \u003d \"V nocnem nacinu (spi)\"\t\t\n\telif value\u003d\u003d3:\n\t\tstanje \u003d \"V procesu zagona\"\n\telif value\u003d\u003d4:\n\t\tstanje \u003d \"Deluje in proizvaja\"\t\t\n\telif value\u003d\u003d5:\n\t\tstanje \u003d \"Deluje in proizvaja z omejitvijo\"\n\telif value\u003d\u003d6:\n\t\tstanje \u003d \"V procesu izklopa\"\t\t\t\n\telif value\u003d\u003d7:\n\t\tstanje \u003d \"Sistem v napaki\"\n\telif value\u003d\u003d7:\n\t\tstanje \u003d \"V procesu vzdrževanja\"\n\t\t\t\t\t\t\n\treturn stanje\n\t",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Trenutna moč smart label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]SolarEdge inverter/I_AC_Power_scaled"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\ttr_moc \u003d (str(value) + \" W\")\n\treturn tr_moc",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer_0"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Proizvedeno danes smart label_0"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]priceCalculation/dailyTotalProductionkWh"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif type(value) \u003d\u003d float:\n\t\ttr_moc \u003d (str(round(value, 1)) + \" kWh\")\n\telse:\n\t\ttr_moc \u003d \"0 kWh %\"\n\t\t\n\treturn tr_moc",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer_2"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Prihranek danes smart label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]priceCalculation/dailyTotalProductionEuro"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif type(value) \u003d\u003d float:\n\t\tprihranek \u003d (str(round(value,2)) + \" EUR\")\n\telse:\n\t\tprihranek \u003d \"0 EUR\"\n\t\t\n\treturn prihranek",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontFamily": "Helvetica"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer_3"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "42px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[default]SolarEdge inverter/Transformator power loss percentage"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\tif type(value) \u003d\u003d float:\n\t\tizguba \u003d (str(round(value,1)) + \" %\")\n\telse:\n\t\tizguba \u003d \"0 %\"\n\t\t\n\treturn izguba",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "76px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[default]SolarEdge inverter/Transformator power loss watts"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\tizguba \u003d (\"oz. \" + str(round(value,1)) + \" W\")\n\treturn izguba",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "160px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacer"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Sparkline"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.points": {
+                    "binding": {
+                      "config": {
+                        "aggregate": "Average",
+                        "avoidScanClassValidation": true,
+                        "dateRange": {
+                          "mostRecent": "6",
+                          "mostRecentUnits": "HOUR"
+                        },
+                        "ignoreBadQuality": false,
+                        "polling": {
+                          "enabled": true,
+                          "rate": "10"
+                        },
+                        "preventInterpolation": false,
+                        "returnFormat": "Wide",
+                        "returnSize": {
+                          "numRows": "100",
+                          "type": "FIXED"
+                        },
+                        "tags": [
+                          {
+                            "path": "[default]SolarEdge inverter/I_AC_Power_scaled"
+                          }
+                        ],
+                        "valueFormat": "DATASET"
+                      },
+                      "type": "tag-history"
+                    }
+                  }
+                },
+                "props": {
+                  "marker": {
+                    "first": {
+                      "shape": "triangle"
+                    },
+                    "last": {
+                      "shape": "triangle"
+                    }
+                  },
+                  "range": {
+                    "low": 0
+                  }
+                },
+                "type": "ia.display.sparkline"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "420px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "250px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Page/Page"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

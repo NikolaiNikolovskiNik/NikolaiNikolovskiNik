@@ -1,0 +1,1457 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 2144,
+      "width": 1624
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 102,
+          "width": 803,
+          "x": 501,
+          "y": 10
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 50,
+            "textAlign": "center"
+          },
+          "text": "SolarEdge inverter "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Gauge"
+        },
+        "position": {
+          "height": 208,
+          "width": 426.09,
+          "x": 8.004806518554688,
+          "y": 233
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]SolarEdge inverter/I_AC_Power_scaled"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "backgroundColor": "",
+          "innerAxis": {
+            "data": "secondaryValue",
+            "maxValue": 0,
+            "percentRadius": 85,
+            "show": false,
+            "width": 0
+          },
+          "outerAxis": {
+            "color": "#D5D5D5",
+            "data": "value",
+            "maxValue": 14000,
+            "percentRadius": 100,
+            "ranges": [
+              {
+                "color": "#00AC00",
+                "end": 11000,
+                "start": 0,
+                "width": 8
+              },
+              {
+                "color": "#D9D900",
+                "end": 13000,
+                "start": 11000,
+                "width": 8
+              },
+              {
+                "color": "#D90000",
+                "end": 14000,
+                "start": 13000,
+                "width": 8
+              }
+            ],
+            "show": true,
+            "width": 3
+          },
+          "secondaryValue": 50,
+          "style": {
+            "classes": []
+          }
+        },
+        "type": "ia.chart.gauge"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 102,
+          "rotate": {
+            "anchor": "40% 50%"
+          },
+          "width": 374,
+          "x": 278.4348065185547,
+          "y": 96
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 30,
+            "textAlign": "center"
+          },
+          "text": "Power production\n"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 43,
+          "rotate": {
+            "anchor": "36% 64%"
+          },
+          "width": 241,
+          "x": 100.16580651855469,
+          "y": 460.914
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 20,
+            "textAlign": "center"
+          },
+          "text": "AC - WATT"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Gauge_0"
+        },
+        "position": {
+          "height": 208,
+          "width": 426.09,
+          "x": 439.9148065185547,
+          "y": 233
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]SolarEdge inverter/I_DC_Power_scaled"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "backgroundColor": "",
+          "innerAxis": {
+            "data": "secondaryValue",
+            "maxValue": 0,
+            "percentRadius": 85,
+            "show": false,
+            "width": 0
+          },
+          "outerAxis": {
+            "color": "#D5D5D5",
+            "data": "value",
+            "maxValue": 14000,
+            "percentRadius": 100,
+            "ranges": [
+              {
+                "color": "#00AC00",
+                "end": 11000,
+                "start": 0,
+                "width": 8
+              },
+              {
+                "color": "#D9D900",
+                "end": 13000,
+                "start": 11000,
+                "width": 8
+              },
+              {
+                "color": "#D90000",
+                "end": 14000,
+                "start": 13000,
+                "width": 8
+              }
+            ],
+            "show": true,
+            "width": 3
+          },
+          "secondaryValue": 50,
+          "style": {
+            "classes": []
+          }
+        },
+        "type": "ia.chart.gauge"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 43,
+          "width": 241,
+          "x": 532.3858065185547,
+          "y": 460.951
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 20,
+            "textAlign": "center"
+          },
+          "text": "DC - WATT"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 50,
+          "rotate": {
+            "anchor": "50% 25%"
+          },
+          "width": 124,
+          "x": 1241,
+          "y": 199.001
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {},
+                "tagPath": "[default]SolarEdge inverter/Transformator power loss percentage"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalue \u003d str(round(value, 2))\n\tvalue \u003d (value + \"%\")\n\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 43,
+          "width": 348,
+          "x": 878.006,
+          "y": 202.001
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 20,
+            "textAlign": "right"
+          },
+          "text": "Power lost in transformation: "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 43,
+          "width": 348,
+          "x": 878.006,
+          "y": 394
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 20,
+            "textAlign": "right"
+          },
+          "text": "Total daily production in kWh"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_6"
+        },
+        "position": {
+          "height": 50,
+          "rotate": {
+            "anchor": "50% 25%"
+          },
+          "width": 122,
+          "x": 1241,
+          "y": 263
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]SolarEdge inverter/Transformator power loss watts"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalue \u003d (str(value) + \" Watt\")\n\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_7"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 196.04480651855468,
+          "y": 428.966
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]SolarEdge inverter/I_AC_Power_scaled"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalue \u003d str(round(value, 1))\n\tvalue \u003d (value + \"W\")\n\n\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_8"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 627.9858065185547,
+          "y": 428.932
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]SolarEdge inverter/I_DC_Power_scaled"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalue \u003d str(round(value, 0))\n\tvalue \u003d (value + \"W\")\n\n\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "TimeSeriesChart_acWatt",
+          "visible": false
+        },
+        "position": {
+          "height": 587,
+          "width": 1122,
+          "x": 13,
+          "y": 520.906
+        },
+        "propConfig": {
+          "props.series[0].data": {
+            "binding": {
+              "config": {
+                "aggregate": "LastValue",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "mostRecent": "24",
+                  "mostRecentUnits": "HOUR"
+                },
+                "ignoreBadQuality": false,
+                "polling": {
+                  "enabled": true,
+                  "rate": "15"
+                },
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "500",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "alias": "Watt",
+                    "path": "[default]SolarEdge inverter/I_AC_Power_scaled"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          }
+        },
+        "props": {
+          "defaultStyles": {
+            "colorScheme": "Dark2",
+            "normal": {
+              "stroke": {
+                "width": 2
+              }
+            }
+          },
+          "legend": {
+            "visible": true
+          },
+          "series": [
+            {
+              "name": "Watt"
+            }
+          ],
+          "timeAxis": {
+            "color": "#000000",
+            "height": 20,
+            "tick": {
+              "color": "#000000",
+              "label": {
+                "font": {
+                  "color": "#000000"
+                },
+                "format": "YYYY-M-D h:mm:ss"
+              }
+            },
+            "tickCount": 6
+          },
+          "timeRange": {
+            "dateFormat": "YYYY-M-D",
+            "timeFormat": "HH:mm:ss",
+            "visible": false
+          },
+          "title": {
+            "font": {
+              "color": "#2B2B2B",
+              "size": 15
+            },
+            "height": 20,
+            "text": "AC - Watt production in last 24h",
+            "visible": true
+          },
+          "xTrace": {
+            "infoBox": {
+              "dateFormat": "YYYY-M-D",
+              "fill": {
+                "color": "#FFFFFF7D"
+              },
+              "showTime": false,
+              "stroke": {
+                "color": "#000000",
+                "opacity": "0,5"
+              },
+              "timeFormat": "HH:mm:ss",
+              "width": 150
+            }
+          }
+        },
+        "type": "ia.chart.timeseries"
+      },
+      {
+        "meta": {
+          "name": "PowerChart"
+        },
+        "position": {
+          "height": 582,
+          "width": 928,
+          "x": 8,
+          "y": 1160
+        },
+        "props": {
+          "config": {
+            "visibility": {
+              "showTagBrowser": true
+            }
+          }
+        },
+        "type": "ia.chart.powerchart"
+      },
+      {
+        "meta": {
+          "name": "Label_9"
+        },
+        "position": {
+          "height": 50,
+          "rotate": {
+            "anchor": "50% 25%"
+          },
+          "width": 122,
+          "x": 1241,
+          "y": 327
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]priceCalculation/dailyTotalProductionEuro"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalue \u003d (str(format(value, \".2f\")) + \" Euros\")\n\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_10"
+        },
+        "position": {
+          "height": 43,
+          "width": 348,
+          "x": 878.006,
+          "y": 330
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 20,
+            "textAlign": "right"
+          },
+          "text": "Total daily production in Euro"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_11"
+        },
+        "position": {
+          "height": 50,
+          "rotate": {
+            "anchor": "50% 25%"
+          },
+          "width": 122,
+          "x": 1241,
+          "y": 391
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]priceCalculation/dailyTotalProductionkWh"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalue \u003d (str(format(value,\".2f\")) + \" kWh\")\n\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_12"
+        },
+        "position": {
+          "height": 43,
+          "width": 348,
+          "x": 878.006,
+          "y": 266
+        },
+        "props": {
+          "style": {
+            "borderStyle": "hidden",
+            "borderWidth": 5,
+            "fontFamily": "Arial",
+            "fontSize": 20,
+            "textAlign": "right"
+          },
+          "text": "Power lost in transformation actual: "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.getSibling(\"TimeSeriesChart_acWatt\").meta.visible \u003d True\n\tself.getSibling(\"TimeSeriesChart_TodayProduction\").meta.visible \u003d False"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 46,
+          "width": 148,
+          "x": 1216.5,
+          "y": 556
+        },
+        "props": {
+          "text": "AC - Watt production 24h"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.getSibling(\"TimeSeriesChart_acWatt\").meta.visible \u003d False\n\tself.getSibling(\"TimeSeriesChart_TodayProduction\").meta.visible \u003d True"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "height": 46,
+          "width": 148,
+          "x": 1216.5,
+          "y": 652
+        },
+        "props": {
+          "text": "Todays production"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "TimeSeriesChart_TodayProduction"
+        },
+        "position": {
+          "height": 587,
+          "width": 1122,
+          "x": 13,
+          "y": 520
+        },
+        "propConfig": {
+          "props.dataSources.example": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]priceCalculation/dailyProduction"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "dataSources": {},
+          "series": [
+            {
+              "candlestick": {
+                "appearance": {
+                  "deriveFieldsFromData": {
+                    "fill": {
+                      "color": "",
+                      "opacity": ""
+                    },
+                    "stroke": {
+                      "color": "",
+                      "opacity": "",
+                      "width": ""
+                    }
+                  },
+                  "fill": {
+                    "color": "",
+                    "opacity": 1
+                  },
+                  "heatRules": {
+                    "dataField": "",
+                    "enabled": false,
+                    "max": "",
+                    "min": ""
+                  },
+                  "stacked": false,
+                  "stroke": {
+                    "color": "",
+                    "opacity": 1,
+                    "width": 1
+                  }
+                },
+                "high": {
+                  "x": "",
+                  "y": ""
+                },
+                "low": {
+                  "x": "",
+                  "y": ""
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "column": {
+                "appearance": {
+                  "deriveFieldsFromData": {
+                    "fill": {
+                      "color": "",
+                      "opacity": ""
+                    },
+                    "stroke": {
+                      "color": "",
+                      "opacity": "",
+                      "width": ""
+                    }
+                  },
+                  "fill": {
+                    "color": "",
+                    "opacity": 1
+                  },
+                  "heatRules": {
+                    "dataField": "",
+                    "enabled": false,
+                    "max": "",
+                    "min": ""
+                  },
+                  "height": null,
+                  "stacked": true,
+                  "stroke": {
+                    "color": "",
+                    "opacity": 1,
+                    "width": 1
+                  },
+                  "width": null
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "data": {
+                "source": "example",
+                "x": "date",
+                "y": "priceForkWh"
+              },
+              "defaultState": {
+                "visible": true
+              },
+              "hiddenInLegend": false,
+              "label": {
+                "text": "Total euros"
+              },
+              "line": {
+                "appearance": {
+                  "bullets": [
+                    {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "rotation": "",
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "enabled": false,
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": 100,
+                        "min": 2
+                      },
+                      "height": 10,
+                      "label": {
+                        "position": {
+                          "dx": 0,
+                          "dy": 0
+                        },
+                        "text": "{value}"
+                      },
+                      "render": "circle",
+                      "rotation": 0,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "tooltip": {
+                        "background": {
+                          "color": "",
+                          "opacity": 1
+                        },
+                        "cornerRadius": 3,
+                        "enabled": true,
+                        "pointerLength": 4,
+                        "text": "{name}: [bold]{valueY}[/]"
+                      },
+                      "width": 10
+                    }
+                  ],
+                  "connect": true,
+                  "fill": {
+                    "color": "",
+                    "opacity": 0
+                  },
+                  "minDistance": 0.5,
+                  "stroke": {
+                    "color": "",
+                    "dashArray": "",
+                    "opacity": 1,
+                    "width": 3
+                  },
+                  "tensionX": 1,
+                  "tensionY": 1
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "name": "kWh",
+              "render": "column",
+              "stepLine": {
+                "appearance": {
+                  "bullets": [
+                    {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "rotation": "",
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "enabled": true,
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": 100,
+                        "min": 2
+                      },
+                      "height": 10,
+                      "label": {
+                        "position": {
+                          "dx": 0,
+                          "dy": 0
+                        },
+                        "text": "{value}"
+                      },
+                      "render": "circle",
+                      "rotation": 0,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "tooltip": {
+                        "background": {
+                          "color": "",
+                          "opacity": 1
+                        },
+                        "cornerRadius": 3,
+                        "enabled": true,
+                        "pointerLength": 4,
+                        "text": "{name}: [bold]{valueY}[/]"
+                      },
+                      "width": 10
+                    }
+                  ],
+                  "connect": true,
+                  "fill": {
+                    "color": "",
+                    "opacity": 0
+                  },
+                  "minDistance": 0.5,
+                  "stroke": {
+                    "color": "",
+                    "dashArray": "",
+                    "opacity": 1,
+                    "width": 3
+                  },
+                  "tensionX": 1,
+                  "tensionY": 1
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "tooltip": {
+                "background": {
+                  "color": "",
+                  "opacity": 1
+                },
+                "cornerRadius": 3,
+                "enabled": true,
+                "pointerLength": 4,
+                "text": "{name}: [bold]{valueY}[/]"
+              },
+              "visible": true,
+              "xAxis": "time",
+              "yAxis": "kWh/price",
+              "zIndex": 0
+            },
+            {
+              "candlestick": {
+                "appearance": {
+                  "deriveFieldsFromData": {
+                    "fill": {
+                      "color": "",
+                      "opacity": ""
+                    },
+                    "stroke": {
+                      "color": "",
+                      "opacity": "",
+                      "width": ""
+                    }
+                  },
+                  "fill": {
+                    "color": "",
+                    "opacity": 1
+                  },
+                  "heatRules": {
+                    "dataField": "",
+                    "enabled": false,
+                    "max": "",
+                    "min": ""
+                  },
+                  "stacked": false,
+                  "stroke": {
+                    "color": "",
+                    "opacity": 1,
+                    "width": 1
+                  }
+                },
+                "high": {
+                  "x": "",
+                  "y": ""
+                },
+                "low": {
+                  "x": "",
+                  "y": ""
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "column": {
+                "appearance": {
+                  "deriveFieldsFromData": {
+                    "fill": {
+                      "color": "",
+                      "opacity": ""
+                    },
+                    "stroke": {
+                      "color": "",
+                      "opacity": "",
+                      "width": ""
+                    }
+                  },
+                  "fill": {
+                    "color": "",
+                    "opacity": 1
+                  },
+                  "heatRules": {
+                    "dataField": "",
+                    "enabled": false,
+                    "max": "",
+                    "min": ""
+                  },
+                  "height": null,
+                  "stacked": true,
+                  "stroke": {
+                    "color": "",
+                    "opacity": 1,
+                    "width": 1
+                  },
+                  "width": null
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "data": {
+                "source": "example",
+                "x": "date",
+                "y": "kWh"
+              },
+              "defaultState": {
+                "visible": true
+              },
+              "hiddenInLegend": false,
+              "label": {
+                "text": "kWh"
+              },
+              "line": {
+                "appearance": {
+                  "bullets": [
+                    {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "rotation": "",
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "enabled": false,
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": 100,
+                        "min": 2
+                      },
+                      "height": 10,
+                      "label": {
+                        "position": {
+                          "dx": 0,
+                          "dy": 0
+                        },
+                        "text": "{value}"
+                      },
+                      "render": "circle",
+                      "rotation": 0,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "tooltip": {
+                        "background": {
+                          "color": "",
+                          "opacity": 1
+                        },
+                        "cornerRadius": 3,
+                        "enabled": true,
+                        "pointerLength": 4,
+                        "text": "{name}: [bold]{valueY}[/]"
+                      },
+                      "width": 10
+                    }
+                  ],
+                  "connect": true,
+                  "fill": {
+                    "color": "",
+                    "opacity": 0
+                  },
+                  "minDistance": 0.5,
+                  "stroke": {
+                    "color": "",
+                    "dashArray": "",
+                    "opacity": 1,
+                    "width": 3
+                  },
+                  "tensionX": 1,
+                  "tensionY": 1
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "name": "Price",
+              "render": "column",
+              "stepLine": {
+                "appearance": {
+                  "bullets": [
+                    {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "rotation": "",
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "enabled": true,
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": 100,
+                        "min": 2
+                      },
+                      "height": 10,
+                      "label": {
+                        "position": {
+                          "dx": 0,
+                          "dy": 0
+                        },
+                        "text": "{value}"
+                      },
+                      "render": "circle",
+                      "rotation": 0,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "tooltip": {
+                        "background": {
+                          "color": "",
+                          "opacity": 1
+                        },
+                        "cornerRadius": 3,
+                        "enabled": true,
+                        "pointerLength": 4,
+                        "text": "{name}: [bold]{valueY}[/]"
+                      },
+                      "width": 10
+                    }
+                  ],
+                  "connect": true,
+                  "fill": {
+                    "color": "",
+                    "opacity": 0
+                  },
+                  "minDistance": 0.5,
+                  "stroke": {
+                    "color": "",
+                    "dashArray": "",
+                    "opacity": 1,
+                    "width": 3
+                  },
+                  "tensionX": 1,
+                  "tensionY": 1
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "tooltip": {
+                "background": {
+                  "color": "",
+                  "opacity": 1
+                },
+                "cornerRadius": 3,
+                "enabled": true,
+                "pointerLength": 4,
+                "text": "{name}: [bold]{valueY}[/]"
+              },
+              "visible": true,
+              "xAxis": "time",
+              "yAxis": "kWh/price",
+              "zIndex": 0
+            }
+          ],
+          "title": {
+            "text": "Today\u0027s production"
+          },
+          "xAxes": [
+            {
+              "appearance": {
+                "font": {
+                  "size": "",
+                  "weight": 500
+                },
+                "grid": {
+                  "color": "",
+                  "dashArray": "",
+                  "minDistance": 60,
+                  "opacity": 1,
+                  "position": 0.5
+                },
+                "inside": false,
+                "labels": {
+                  "color": "",
+                  "opacity": 1
+                },
+                "opposite": false
+              },
+              "category": {
+                "break": {
+                  "enabled": false,
+                  "endCategory": "",
+                  "size": 0.05,
+                  "startCategory": ""
+                }
+              },
+              "date": {
+                "baseInterval": {
+                  "count": 1,
+                  "enabled": false,
+                  "skipEmptyPeriods": false,
+                  "timeUnit": "hour"
+                },
+                "break": {
+                  "enabled": false,
+                  "endDate": "",
+                  "size": 0.05,
+                  "startDate": ""
+                },
+                "format": "hh:mm",
+                "inputFormat": "yyyy-MM-dd kk:mm:ss",
+                "range": {
+                  "max": "",
+                  "min": "",
+                  "useStrict": false
+                }
+              },
+              "inversed": false,
+              "label": {
+                "color": "",
+                "enabled": true,
+                "text": "Time"
+              },
+              "name": "time",
+              "render": "date",
+              "tooltip": {
+                "background": {
+                  "color": "",
+                  "opacity": 1
+                },
+                "cornerRadius": 3,
+                "enabled": true,
+                "pointerLength": 4,
+                "text": ""
+              },
+              "value": {
+                "break": {
+                  "enabled": false,
+                  "endValue": 100,
+                  "size": 0.05,
+                  "startValue": 0
+                },
+                "format": "#,###.##",
+                "logarithmic": false,
+                "range": {
+                  "max": "",
+                  "min": "",
+                  "useStrict": false
+                }
+              },
+              "visible": true
+            }
+          ],
+          "yAxes": [
+            {
+              "appearance": {
+                "font": {
+                  "size": "",
+                  "weight": 500
+                },
+                "grid": {
+                  "color": "",
+                  "dashArray": "",
+                  "minDistance": null,
+                  "opacity": 1,
+                  "position": 0.5
+                },
+                "inside": false,
+                "labels": {
+                  "color": "",
+                  "opacity": 1
+                },
+                "opposite": false
+              },
+              "category": {
+                "break": {
+                  "enabled": false,
+                  "endCategory": "",
+                  "size": 0.05,
+                  "startCategory": ""
+                }
+              },
+              "date": {
+                "baseInterval": {
+                  "count": 1,
+                  "enabled": false,
+                  "skipEmptyPeriods": false,
+                  "timeUnit": "hour"
+                },
+                "break": {
+                  "enabled": false,
+                  "endDate": "",
+                  "size": 0.05,
+                  "startDate": ""
+                },
+                "format": "M/d/yyyy HH:mm:ss",
+                "inputFormat": "yyyy-MM-dd kk:mm:ss",
+                "range": {
+                  "max": "",
+                  "min": "",
+                  "useStrict": false
+                }
+              },
+              "inversed": false,
+              "label": {
+                "color": "",
+                "enabled": true,
+                "text": ""
+              },
+              "name": "kWh/price",
+              "render": "value",
+              "tooltip": {
+                "background": {
+                  "color": "",
+                  "opacity": 1
+                },
+                "cornerRadius": 3,
+                "enabled": true,
+                "pointerLength": 4,
+                "text": ""
+              },
+              "value": {
+                "break": {
+                  "enabled": false,
+                  "endValue": 100,
+                  "size": 0.05,
+                  "startValue": 0
+                },
+                "format": "#,###.##",
+                "logarithmic": false,
+                "range": {
+                  "max": "",
+                  "min": "",
+                  "useStrict": false
+                }
+              },
+              "visible": true
+            }
+          ]
+        },
+        "type": "ia.chart.xy"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}
