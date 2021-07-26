@@ -707,7 +707,7 @@
           "name": "CoordinateContainer"
         },
         "position": {
-          "basis": "788px",
+          "basis": "792px",
           "shrink": 0
         },
         "type": "ia.container.coord"
